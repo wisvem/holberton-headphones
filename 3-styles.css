@@ -1,0 +1,414 @@
+@font-face {
+  font-family: 'holberton_school-icon';
+  src:  url('./fonts/holberton_school-icon.eot?sq4eq4');
+  src:  url('./fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+  url('./fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+  url('./fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+  url('./fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --red-color: #FF6565;
+  --white-color: #ffffff;
+  --blue-color: #071629;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+}
+
+a {
+  color: var(--white-color);
+}
+
+a:hover,
+a:active {
+  color: var(--red-color);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+button:hover, button:active {
+  opacity: 0.9;
+}
+
+.container {
+  width: 98%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header .container {
+  display: block;
+  padding-top: 20px;
+}
+
+header input {
+  display: none;
+}
+
+.icon-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.menu-line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: 0.3s ease-in-out;
+}
+
+.menu-line-2 {
+  margin: 5px 0;
+  width: 13px;
+  opacity: 1;
+}
+
+#menu-bar:checked ~ label .menu-line-1 {
+  transform: rotate(45deg);
+}
+
+#menu-bar:checked ~ label .menu-line-2 {
+  margin: -2px 0;
+  opacity: 0;
+}
+
+#menu-bar:checked ~ label .menu-line-3 {
+  transform: rotate(-45deg);
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.logo {
+  height: 30px;
+}
+
+.menu {
+  display: flex;
+  position: absolute;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#menu-bar:checked ~ .container-menu .menu {
+  opacity: 1;
+}
+
+.menu a {
+  margin-top: -20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: margin-top 0.3s ease-in-out;
+}
+
+#menu-bar:checked ~ .container-menu .menu a {
+  margin-top: 30px;
+}
+
+.hero-section {
+  margin-top: -50px;
+  background: url("./images/headphones_hero_1.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.hero-section .container {
+  height: auto;
+  padding-bottom: 80px;
+  color: var(--white-color);
+}
+
+.hero-section h1 {
+  width: 90%;
+  margin-top: 210px;
+}
+
+.hero-section h2 {
+  width: 70%;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+button{
+  width: 162px;
+  height: 44px;
+  border-style: none;
+  border-radius: 150px;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hero-section button {
+  margin-top: 20px;
+}
+
+.hero-section p {
+  width: 90%;
+  margin-top: 50px;
+}
+
+.whatwedo-section .container {
+  color: var(--blue-color);
+  margin: 110px auto;
+}
+
+.whatwedo-section p {
+  max-width: 637px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+.icons-container {
+  margin-top: 30px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item p {
+  margin: 13px 0 0 0;
+  width: 207px;
+}
+
+[class^="pic-"], [class*="pic-"] {
+  font-family: 'holberton_school-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 140px;
+  color: var(--red-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pic-sound:before {
+  content: "\e90e";
+}
+
+.pic-video:before {
+  content: "\e910";
+}
+
+.pic-music:before {
+  content: "\e90d";
+}
+
+.pic-hearing:before {
+  content: "\e909";
+}
+
+.ourresults-section {
+  background: url("./images/headphones_hero_2.jpg") no-repeat center;
+  background-size: cover;
+  color: var(--white-color);
+  padding-bottom: 14px;
+}
+
+.ourresults-section h1 {
+  margin-top: 110px;
+}
+
+.ourresults-section p {
+  max-width: 637px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+.ourresults-section .item {
+  background: url("./images/pentagone.png") no-repeat center;
+  background-size: contain;
+}
+
+.ourresults-section .item h1,
+.ourresults-section .item p {
+  margin: 0;
+}
+
+.contactus-section .container {
+  margin: 110px auto;
+}
+
+form {
+  max-width: 350px;
+  width: 90%;
+  height: 393px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+form input {
+  width: 90%;
+  border: none;
+  border-bottom: solid 1px grey;
+  padding: 5px 0;
+}
+
+@media (min-width: 1024px) {
+  .container {
+	max-width: 1000px;
+  }
+
+  .icon-menu {
+	display: none;
+  }
+
+  .container-menu {
+	flex-direction: row;
+	justify-content: space-between;
+  }
+
+  .menu {
+	width: 300px;
+	height: 30px;
+    display: flex;
+	position: static;
+	margin-top: 0;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	opacity: 1;
+  }
+
+  .menu a {
+	margin-top: 0px;
+  }
+
+  .hero-section {
+	background-position: center;
+  }
+
+  .hero-section .container {
+	height: 800px;
+	padding-bottom: 0;
+  }
+
+  .hero-section p {
+	width: 637px;
+  }
+
+  .whatwedo-section .container {
+	height: 694px;
+	margin: 0px auto;
+  }
+
+  .icons-container {
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+
+  .items-container {
+	flex-direction: row;
+	flex-wrap: wrap;
+  }
+
+  .ourresults-section .container {
+	height: 650px;
+	margin: 0px auto;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+  .container-menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu {
+	width: 300px;
+	height: 30px;
+    display: flex;
+    position: static;
+    margin-top: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+  }
+
+  .menu a {
+	margin-top: 0px;
+  }
+
+  .hero-section {
+	background-position: center;
+  }
+
+  .hero-section .container {
+	height: 800px;
+	padding-bottom: 0;
+  }
+
+  .hero-section p {
+	width: 637px;
+  }
+
+  .icons-container {
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 70%;
+  }
+}

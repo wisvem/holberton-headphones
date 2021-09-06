@@ -1,0 +1,249 @@
+:root {
+  --red-color: #FF6565;
+  --white-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  color: var(--white-color);
+}
+
+a {
+  color: var(--white-color);
+}
+
+a:hover,
+a:active {
+  color: var(--red-color);
+}
+
+button:hover, button:active {
+  opacity: 0.9;
+}
+
+.container {
+  width: 98%;
+  margin: auto;
+}
+
+header .container {
+  padding-top: 20px;
+}
+
+input {
+  display: none;
+}
+
+.icon-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.menu-line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: 0.3s ease-in-out;
+}
+
+.menu-line-2 {
+  margin: 5px 0;
+  width: 13px;
+  opacity: 1;
+}
+
+#menu-bar:checked ~ label .menu-line-1 {
+  transform: rotate(45deg);
+}
+
+#menu-bar:checked ~ label .menu-line-2 {
+  margin: -2px 0;
+  opacity: 0;
+}
+
+#menu-bar:checked ~ label .menu-line-3 {
+  transform: rotate(-45deg);
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.logo {
+  height: 30px;
+}
+
+.menu {
+  display: flex;
+  position: absolute;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#menu-bar:checked ~ .container-menu .menu {
+  opacity: 1;
+}
+
+.menu a {
+  margin-top: -20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: margin-top 0.3s ease-in-out;
+}
+
+#menu-bar:checked ~ .container-menu .menu a {
+  margin-top: 30px;
+}
+
+.hero-section {
+  margin-top: -50px;
+  background: url("./images/headphones_hero_1.jpg") no-repeat;
+  background-size: cover;
+  background-position: -400px;
+}
+
+.hero-section .container {
+  height: 869px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+}
+
+.hero-section h1 {
+  width: 90%;
+  font-size: 32px;
+  margin-top: 210px;
+}
+
+.hero-section h2 {
+  width: 70%;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+button{
+  width: 162px;
+  height: 44px;
+  border-style: none;
+  border-radius: 150px;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hero-section button {
+  margin-top: 20px;
+}
+
+.hero-section p {
+  width: 90%;
+  margin-top: 50px;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  .container {
+	max-width: 1000px;
+  }
+
+  .icon-menu {
+	display: none;
+  }
+
+  .container-menu {
+	flex-direction: row;
+	justify-content: space-between;
+  }
+
+  .menu {
+	width: 300px;
+	height: 30px;
+    display: flex;
+	position: static;
+	margin-top: 0;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	opacity: 1;
+  }
+
+  .menu a {
+	margin-top: 0px;
+  }
+
+  .hero-section {
+	background-position: center;
+  }
+
+  .hero-section .container {
+	height: 800px;
+  }
+
+  .hero-section p {
+	width: 637px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+  .container-menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu {
+	width: 300px;
+	height: 30px;
+    display: flex;
+    position: static;
+    margin-top: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+  }
+
+  .menu a {
+	margin-top: 0px;
+  }
+
+  .hero-section {
+	background-position: center;
+  }
+
+  .hero-section .container {
+	height: 800px;
+  }
+
+  .hero-section p {
+	width: 637px;
+  }
+}
