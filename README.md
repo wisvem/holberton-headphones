@@ -1,7 +1,5 @@
-# 0x09. Implement a design from scratch
+# Holberton Headphones
 
-In this project, you will implement from scratch, without any library, a web page. You will use all HTML/CSS/Accessibility/Responsive design knowledges that you learned previously.
+In this project, you will implement 3 web pages with Bootstrap. You will use all HTML/CSS/Accessibility/Responsive design/Bootstrap knowledges that you learned previously.
 
-- Requirements
-    - you are not allowed to import external CSS framework (like Bootstrap)
-    - you are not to use Javascript
+You won’t have a lot of instruction, you are free to implement it the way that you want - the objective is simple: Have fully functional web pages that look the same as the designer file.
